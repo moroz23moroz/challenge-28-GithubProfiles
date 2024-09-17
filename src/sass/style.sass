@@ -2,51 +2,23 @@
 @import 'base/fonts'
 @import 'base/variables'
 
-html,
 body
-    height: 100%
-
-body
+    background-color: #2a2a72
     margin: 0
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
-    // background: $dark-color
-    // font-family: $lato
-    // color: $main-color
+    height: 100vh
+    overflow: hidden
+    font-family: $comfortaa, sans-serif
+    color: $main-color
 
 *
     box-sizing: border-box
     margin: 0
 
-html
-    scroll-behavior: smooth
-
-button
-    padding: 0
-    background-color: transparent
-    border: none
-
-h1, h2, h3, h4
-    margin: 0
-    font-weight: normal
-
-img
-    width: auto
-    max-width: 100%
-    height: auto
-
-iframe, img, svg, video
-    max-width: 100%
-    vertical-align: top
-    height: auto
-
-p
-    margin: 0
-
 ul
-    margin: 0
     padding-left: 0
 
 li
@@ -54,3 +26,71 @@ li
 
 a
     text-decoration: none
+    color: inherit
+
+.user-form
+    width: 100%
+    max-width: 700px
+    & input
+        width: 100%
+        display: block
+        background-color: #4c2885
+        border: none
+        border-radius: 10px
+        color: $main-color
+        padding: 1rem
+        margin-bottom: 2rem
+        font: 1em inherit
+        box-shadow: 0 5px 10px rgba(154, 160,185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1)
+        &:focus
+            outline: none
+        &::placeholder
+            color: #bbb
+    @media (max-width: 500px)
+        max-width: 400px
+
+.card
+    max-width: 800px
+    background-color: #4c2885
+    border-radius: 20px
+    box-shadow: 0 5px 10px rgba(154, 160,185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1)
+    display: flex
+    gap: 20px
+    padding: 3rem
+    margin: 0 1.5rem
+    @media (max-width: 500px)
+        flex-direction: column
+        align-items: center
+
+.avatar
+    border-radius: 50%
+    border: 10px solid #2a2a72
+    height: 150px
+    width: 150px
+
+.user-info
+    color: #eee
+    margin-left: 2rem
+    display: flex
+    flex-direction: column
+    gap: 15px
+    & h2
+        margin-top: 0
+    & ul
+        display: flex
+        justify-content: space-between
+        max-width: 400px
+        & li
+            display: flex
+            align-items: center
+            & strong
+                font-size: 0.9rem
+                margin-left: 0.5rem
+
+.repo
+    background-color: #212a72
+    font-size: 0.7rem
+    padding: 0.25rem 0.5rem
+    margin-right: 0.5rem
+    margin-bottom: 0.5rem
+    display: inline-block
